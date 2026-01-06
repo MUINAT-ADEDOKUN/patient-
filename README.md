@@ -1,62 +1,119 @@
 # No-Show Predictor: Improving Patient Attendance with Machine Learning
 
-An open-source machine learning system that predicts whether patients will attend their scheduled appointments, helping healthcare providers reduce missed appointments and improve service efficiency.
+An open-source machine learning system that predicts whether patients will attend their scheduled healthcare appointments. This project helps healthcare providers reduce missed appointments and improve operational efficiency using data-driven insights.
+
+This work demonstrates the practical application of **machine learning, data analysis, and predictive modeling** to a real-world healthcare problem.
 
 ---
 
 ## 💡 Key Features
-- Data cleaning and preprocessing (handling missing values, invalid ages, inconsistent labels)  
-- Exploratory Data Analysis (EDA) with visualizations:
-  - Missing values
-  - Age distribution by Outcome and Diagnosis
-  - Gender proportions by Diagnosis
-  - GP Practice no-show rates
-- Classification models: K-Nearest Neighbors (KNN) and Decision Tree  
-- Evaluation with accuracy, confusion matrices, and classification reports  
-- Feature importance and variance thresholding for model interpretability  
-- Deployment-ready structure (Flask / Streamlit optional)  
+
+### 🔹 Data Preparation
+- Comprehensive data cleaning and preprocessing  
+- Handling missing values  
+- Fixing invalid ages  
+- Standardizing inconsistent appointment outcome labels  
+
+### 🔹 Exploratory Data Analysis (EDA)
+- Missing data analysis  
+- Age distribution by outcome and diagnosis  
+- Gender proportions by diagnosis  
+- GP practice–level no-show rates  
+- Time-based no-show trends  
+
+### 🔹 Machine Learning
+- Feature engineering and variance thresholding  
+- Classification models:
+  - K-Nearest Neighbors (KNN)  
+  - Decision Tree Classifier  
+
+### 🔹 Model Evaluation
+- Accuracy  
+- Precision, Recall, and F1-score  
+- Confusion matrices  
+
+### 🔹 Reproducibility & Deployment
+- Reproducible workflow with all charts saved programmatically  
+- Deployment-ready structure (Streamlit / Flask optional)  
 
 ---
 
 ## 🧠 Business Impact
-Missed appointments increase costs, reduce patient care efficiency, and waste clinical resources.  
-This project enables healthcare providers to **predict no-shows**, optimize scheduling, and improve patient outcomes.
 
-> 💬 *Potential impact: reduce missed appointments by 20–30% and improve clinic efficiency.*
+Missed healthcare appointments lead to:
+- Increased operational costs  
+- Inefficient use of clinical resources  
+- Reduced quality of patient care  
+
+This project enables healthcare providers to:
+- Predict patients at risk of missing appointments  
+- Implement targeted reminders or scheduling interventions  
+- Improve clinic efficiency and patient outcomes  
+
+> **Potential Impact:**  
+> Reduce missed appointments by **20–30%** through predictive analytics and early intervention.
 
 ---
 
 ## 🧩 Dataset
+
 **Dataset:** NHS patient appointment dataset  
 
-Includes features such as:  
-- Patient ID, Age, Gender  
+### Included Features
+- Patient ID  
+- Age  
+- Gender  
 - Diagnosis  
 - GP Practice  
 - Appointment Date  
-- Appointment Outcome (Attended / Did Not Attend / variants)  
+- Appointment Outcome  
 
-Target variable: **MissedAppointment** (binary: 1 = missed, 0 = attended)
+### 🎯 Target Variable
+**MissedAppointment**
+- `1` = Missed appointment  
+- `0` = Attended appointment  
 
 ---
 
 ## ⚙️ Technical Stack
+
 | Category | Tools |
-|-----------|-------|
-| Data Analysis | Python, Pandas, NumPy |
+|--------|------|
+| Programming | Python |
+| Data Analysis | Pandas, NumPy |
 | Visualization | Matplotlib, Seaborn |
 | Machine Learning | Scikit-learn |
-| Deployment | Streamlit / Flask (optional) |
+| Deployment (Optional) | Streamlit, Flask |
+
+---
+
+## 👩‍💻 My Role and Contributions
+- Designed and implemented the end-to-end machine learning pipeline  
+- Cleaned and standardized raw NHS appointment data  
+- Conducted exploratory data analysis and feature engineering  
+- Built and evaluated KNN and Decision Tree models  
+- Applied variance thresholding for feature selection  
+- Interpreted model outputs into actionable healthcare insights  
+- Saved and documented all visual outputs for reproducibility  
+
+---
+
+## 🚀 Innovation and Technical Value
+- Applies machine learning to real-world public healthcare operations  
+- Transforms raw appointment data into predictive decision-support tools  
+- Demonstrates scalable analytics applicable to healthcare systems  
+- Bridges data science, machine learning, and operational impact  
 
 ---
 
 ## 📈 Model Performance
+
 | Model | Accuracy | F1-score (Missed) |
-|-------|----------|------------------|
-| K-Nearest Neighbors | 72% | 0.73 |
+|------|----------|------------------|
+| K-Nearest Neighbors (KNN) | 74% | 0.75 |
 | Decision Tree | 71% | 0.72 |
 
-The models achieve reasonable accuracy and can help identify patients at risk of missing appointments. Key predictive features include **Age, Diagnosis, GP Practice, and Gender**.
+**Key predictive features:** Age, Diagnosis, GP Practice, Gender
 
 ---
 
@@ -65,64 +122,57 @@ The models achieve reasonable accuracy and can help identify patients at risk of
 ### 🔹 Missing Values
 Shows count of missing values by column before cleaning.
 
-![Missing Values](images/missing_values.png)
+![image alt](https://github.com/MUINAT-ADEDOKUN/patient-/blob/34b7222b5c37239af7187e98485f767039458e3c/Missing_Data.png)
 
 ---
 
 ### 🔹 Box Plot – Age by Outcome
 Displays distribution of patient age by attendance outcome.
 
-![Age by Outcome](images/age_boxplot.png)
+![image alt](https://github.com/MUINAT-ADEDOKUN/patient-/blob/34b7222b5c37239af7187e98485f767039458e3c/Box_Plot_Age_by_Outcome.png)
 
 ---
 
 ### 🔹 KDE – Age by Outcome
 Shows age distribution density by attendance outcome.
 
-![Age Density](images/age_density.png)
+![image alt](https://github.com/MUINAT-ADEDOKUN/patient-/blob/34b7222b5c37239af7187e98485f767039458e3c/(KDE)_by_Outcome.png)
 
 ---
 
-### 🔹 No-Show Rate by GP Practice
-Percentage of missed appointments by GP Practice.
-
-![GP Practice No-Show Rate](images/no_show_gp.png)
-
----
 
 ### 🔹 Gender Proportion by Diagnosis
 Pie charts visualizing male/female distribution per diagnosis.
-
-![Gender by Diagnosis](images/gender_diagnosis.png)
+![image alt](https://github.com/MUINAT-ADEDOKUN/patient-/blob/e194ce857465058250417bc6437d4623401b1f75/Gender_Proportion_Asthma.png)
+![image alt](https://github.com/MUINAT-ADEDOKUN/patient-/blob/e194ce857465058250417bc6437d4623401b1f75/Gender_Proportion_Diabetes.png)
+![image alt](https://github.com/MUINAT-ADEDOKUN/patient-/blob/e194ce857465058250417bc6437d4623401b1f75/Gender_Proportion_Hypertension.png)
+![image alt](https://github.com/MUINAT-ADEDOKUN/patient-/blob/e194ce857465058250417bc6437d4623401b1f75/Gender_Proportion_Unknown.png)
 
 ---
 
 ### 🔹 Feature Retention
 Retained vs. dropped features after variance thresholding.
 
-![Feature Retention](images/feature_retention.png)
-
+![image alt](https://github.com/MUINAT-ADEDOKUN/patient-/blob/34b7222b5c37239af7187e98485f767039458e3c/Retained_and_Dropped_Features_after_Variance_Thresholding.png)
 ---
 
 ### 🔹 Confusion Matrix – KNN
 Performance evaluation on test data.
 
-![KNN Confusion Matrix](images/knn_confusion_matrix.png)
+![image alt](https://github.com/MUINAT-ADEDOKUN/patient-/blob/34b7222b5c37239af7187e98485f767039458e3c/KNN_confusion_matrix.png)
 
 ---
 
 ### 🔹 Confusion Matrix – Decision Tree
 Performance evaluation on test data.
 
-![Decision Tree Confusion Matrix](images/decision_tree_confusion_matrix.png)
-
+![image alt](https://github.com/MUINAT-ADEDOKUN/patient-/blob/34b7222b5c37239af7187e98485f767039458e3c/Decision%20Tree%20Model%20Performance.png)
 ---
 
 ### 🔹 No-Show Trend Over Time
 7-day rolling average of missed appointments.
 
-![Rolling Average](images/rolling_average.png)
-
+![image alt](https://github.com/MUINAT-ADEDOKUN/patient-/blob/34b7222b5c37239af7187e98485f767039458e3c/7-Day_Rolling_Average_Missed_Appointments.png)
 ---
 
 ## 🧮 Installation
